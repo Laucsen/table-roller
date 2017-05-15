@@ -75,7 +75,7 @@ describe('default errors:', () => {
           }],
         }],
         roll: '$level',
-      }).should.be.rejectedWith('Invalid result type: yellow.');
+      }).should.be.rejectedWith('Invalid result type: yellow on someawfullname.');
     });
 
     it('should throw an error on REFERENCE results without a name', () => {

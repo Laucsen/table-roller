@@ -8,7 +8,7 @@ const gold = {
       result: [{
         type: 'roll',
         rule: '5d6',
-        item: { itemType: 'money', name: 'PC' },
+        item: { resultType: 'money', name: 'PC' },
       }]
     },
     {
@@ -17,7 +17,7 @@ const gold = {
       result: [{
         type: 'roll',
         rule: '4d6',
-        item: { itemType: 'money', name: 'PP' },
+        item: { resultType: 'money', name: 'PP' },
       }]
     },
     {
@@ -26,7 +26,7 @@ const gold = {
       result: [{
         type: 'roll',
         rule: '3d6',
-        item: { itemType: 'money', name: 'PE' },
+        item: { resultType: 'money', name: 'PE' },
       }]
     },
     {
@@ -35,7 +35,7 @@ const gold = {
       result: [{
         type: 'roll',
         rule: '3d6',
-        item: { itemType: 'money', name: 'PO' },
+        item: { resultType: 'money', name: 'PO' },
       }]
     },
     {
@@ -44,7 +44,7 @@ const gold = {
       result: [{
         type: 'roll',
         rule: '1d6',
-        item: { itemType: 'money', name: 'PL' },
+        item: { resultType: 'money', name: 'PL' },
       }]
     },
   ]

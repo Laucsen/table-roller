@@ -35,7 +35,7 @@ class Category {
 
   slice(type) {
     const sliced = this.items.reduce((pre, current) => {
-      if (current.itemType === type) {
+      if (current.resultType === type) {
         pre.ofType.push(current);
       } else {
         pre.rest.push(current);

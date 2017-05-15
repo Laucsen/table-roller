@@ -1,7 +1,9 @@
 import Result from './result';
 
 export default class Row {
-  constructor(row) {
+  constructor(table, row) {
+    this.table = table;
+
     this.start = -1;
     this.end = -1;
     this.results = [];
@@ -12,7 +14,7 @@ export default class Row {
 
     let localResult = Array.isArray(row.result) ? row.result : [row.result];
     this.results.push(...localResult.map(r => {
-      return new Result(r);
+      return new Result(this.table, r);
     }));
 
     let start = row.start;

@@ -9,11 +9,11 @@ const gold = {
       result: [{
         type: 'roll',
         rule: '2d6x1000',
-        item: { itemType: 'money', name: 'PE' },
+        item: { resultType: 'money', name: 'PE' },
       }, {
         type: 'roll',
         rule: '8d6x100',
-        item: { itemType: 'money', name: 'PO' },
+        item: { resultType: 'money', name: 'PO' },
       }]
     },
     {
@@ -22,11 +22,11 @@ const gold = {
       result: [{
         type: 'roll',
         rule: '1d6x1000',
-        item: { itemType: 'money', name: 'PO' },
+        item: { resultType: 'money', name: 'PO' },
       }, {
         type: 'roll',
         rule: '1d6x100',
-        item: { itemType: 'money', name: 'PL' },
+        item: { resultType: 'money', name: 'PL' },
       }]
     },
     {
@@ -35,11 +35,11 @@ const gold = {
       result: [{
         type: 'roll',
         rule: '1d6x1000',
-        item: { itemType: 'money', name: 'PO' },
+        item: { resultType: 'money', name: 'PO' },
       }, {
         type: 'roll',
         rule: '2d6x100',
-        item: { itemType: 'money', name: 'PL' },
+        item: { resultType: 'money', name: 'PL' },
       }]
     },
   ],

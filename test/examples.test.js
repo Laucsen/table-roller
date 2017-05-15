@@ -28,6 +28,10 @@ describe('default table rolls', () => {
       pile04,
       gem10,
     ])
+      .then(ads => {
+        console.log(ads);
+        return ads;
+      })
       .then(() => done());
   });
 

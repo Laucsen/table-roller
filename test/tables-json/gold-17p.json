@@ -10,7 +10,7 @@
           "type": "roll",
           "rule": "2d6x1000",
           "item": {
-            "itemType": "money",
+            "resultType": "money",
             "name": "PE"
           }
         },
@@ -18,7 +18,7 @@
           "type": "roll",
           "rule": "8d6x100",
           "item": {
-            "itemType": "money",
+            "resultType": "money",
             "name": "PO"
           }
         }
@@ -32,7 +32,7 @@
           "type": "roll",
           "rule": "1d6x1000",
           "item": {
-            "itemType": "money",
+            "resultType": "money",
             "name": "PO"
           }
         },
@@ -40,7 +40,7 @@
           "type": "roll",
           "rule": "1d6x100",
           "item": {
-            "itemType": "money",
+            "resultType": "money",
             "name": "PL"
           }
         }
@@ -54,7 +54,7 @@
           "type": "roll",
           "rule": "1d6x1000",
           "item": {
-            "itemType": "money",
+            "resultType": "money",
             "name": "PO"
           }
         },
@@ -62,7 +62,7 @@
           "type": "roll",
           "rule": "2d6x100",
           "item": {
-            "itemType": "money",
+            "resultType": "money",
             "name": "PL"
           }
         }

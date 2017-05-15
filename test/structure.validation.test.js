@@ -80,11 +80,11 @@ describe('table structure analyser', () => {
             result: [{
               type: 'roll',
               rule: '4d6x100',
-              item: { itemType: 'magic item', name: 'PC' },
+              item: { resultType: 'magic item', name: 'PC' },
             }, {
               type: 'roll',
               rule: '1d6x10',
-              item: { itemType: 'money', name: 'PE' },
+              item: { resultType: 'money', name: 'PE' },
             }]
           }]
       },])
@@ -107,11 +107,11 @@ describe('table structure analyser', () => {
             result: [{
               type: 'roll',
               rule: '4d6x100',
-              item: { itemType: 'money', name: 'PCC' },
+              item: { resultType: 'money', name: 'PCC' },
             }, {
               type: 'roll',
               rule: '1d6x10',
-              item: { itemType: 'money', name: 'PE' },
+              item: { resultType: 'money', name: 'PE' },
             }]
           }]
       },])

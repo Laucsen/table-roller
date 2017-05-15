@@ -22,15 +22,15 @@ const pile04 = {
     {
       type: 'roll',
       rule: '6d6x100',
-      item: { itemType: 'money', name: 'PC' },
+      item: { resultType: 'money', name: 'PC' },
     }, {
       type: 'roll',
       rule: '3d6x100',
-      item: { itemType: 'money', name: 'PP' },
+      item: { resultType: 'money', name: 'PP' },
     }, {
       type: 'roll',
       rule: '2d6',
-      item: { itemType: 'money', name: 'PO' },
+      item: { resultType: 'money', name: 'PO' },
     }
   ],
 };

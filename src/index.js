@@ -94,19 +94,19 @@ export default class Roller {
 
   createSomething(item, value) {
     if (this.currentLanguage === null) {
-      return new Something(item.itemType, item.name, value);
+      return new Something(item.resultType, item.name, value);
     }
 
     const lTable = this.languages[this.currentLanguage];
 
-    if (lTable[item.itemType] === undefined || lTable[item.itemType][item.name] === undefined) {
-      return new Something(item.itemType, item.name, value);
+    if (lTable[item.resultType] === undefined || lTable[item.resultType][item.name] === undefined) {
+      return new Something(item.resultType, item.name, value);
     }
 
-    const name = lTable[item.itemType][item.name].name;
-    const description = lTable[item.itemType][item.name].description;
+    const name = lTable[item.resultType][item.name].name;
+    const description = lTable[item.resultType][item.name].description;
 
-    return new Something(item.itemType, name, value, description);
+    return new Something(item.resultType, name, value, description);
   }
 
   rollAll(rolls) {

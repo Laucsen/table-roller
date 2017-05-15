@@ -15,7 +15,7 @@ export default class Table {
     this.rows = [];
     if (rawTable.defaultResults !== undefined) {
       this.defaultResults = rawTable.defaultResults.map(rr => {
-        return new Result(rr);
+        return new Result(this, rr);
       });
     }
 
@@ -30,7 +30,7 @@ export default class Table {
     }
 
     rawTable.rows.forEach(r => {
-      this.rows.push(new Row(r));
+      this.rows.push(new Row(this, r));
     });
   }
 

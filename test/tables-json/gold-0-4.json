@@ -10,7 +10,7 @@
           "type": "roll",
           "rule": "5d6",
           "item": {
-            "itemType": "money",
+            "resultType": "money",
             "name": "PC"
           }
         }
@@ -24,7 +24,7 @@
           "type": "roll",
           "rule": "4d6",
           "item": {
-            "itemType": "money",
+            "resultType": "money",
             "name": "PP"
           }
         }
@@ -38,7 +38,7 @@
           "type": "roll",
           "rule": "3d6",
           "item": {
-            "itemType": "money",
+            "resultType": "money",
             "name": "PE"
           }
         }
@@ -52,7 +52,7 @@
           "type": "roll",
           "rule": "3d6",
           "item": {
-            "itemType": "money",
+            "resultType": "money",
             "name": "PO"
           }
         }
@@ -66,7 +66,7 @@
           "type": "roll",
           "rule": "1d6",
           "item": {
-            "itemType": "money",
+            "resultType": "money",
             "name": "PL"
           }
         }

@@ -24,7 +24,7 @@
       "type": "roll",
       "rule": "6d6x100",
       "item": {
-        "itemType": "money",
+        "resultType": "money",
         "name": "PC"
       }
     },
@@ -32,7 +32,7 @@
       "type": "roll",
       "rule": "3d6x100",
       "item": {
-        "itemType": "money",
+        "resultType": "money",
         "name": "PP"
       }
     },
@@ -40,7 +40,7 @@
       "type": "roll",
       "rule": "2d6",
       "item": {
-        "itemType": "money",
+        "resultType": "money",
         "name": "PO"
       }
     }

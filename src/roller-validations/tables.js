@@ -49,7 +49,7 @@ export default function validateTables(data) {
           return;
         }
 
-        const type = res.item.itemType;
+        const type = res.item.resultType;
         const name = res.item.name;
 
         if (lTable[type] === undefined) {

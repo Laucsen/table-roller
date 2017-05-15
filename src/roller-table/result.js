@@ -5,17 +5,19 @@ import Item, { isItem } from './item';
 const availableTypes = [ REFERENCE, ROLL, ROLL_REFERENCE ];
 
 export default class Result {
-  constructor(res) {
+  constructor(table, res) {
+    this.table = table;
+
     if (res !== undefined && res !== null && isItem(res)) {
       this.type = ROLL;
       this.rule = '1';
-      this.item = new Item(res);
+      this.item = new Item(this.table, res);
       return;
     }
 
     this.type = res.type;
     if (availableTypes.indexOf(this.type) === -1) {
-      throw new Error(`Invalid result type: ${this.type}.`);
+      throw new Error(`Invalid result type: ${this.type} on ${this.table.name}.`);
     }
 
     if (this.type === REFERENCE) {
@@ -34,7 +36,7 @@ export default class Result {
         throw new Error(`Invalid rule: ${this.rule}.`);
       }
 
-      this.item = new Item(res.item);
+      this.item = new Item(this.table, res.item);
     } else if (this.type === ROLL_REFERENCE) {
       this.name = res.name;
       this.rule = res.rule;
