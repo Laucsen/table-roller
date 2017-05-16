@@ -43,7 +43,9 @@ export default class Roller {
   addLanguage(langTable) {
     // OnDemandTable, RawTable or AbstractTable implementation.
     return new Promise((resolve, reject) => {
-      const incomingLanguage = (langTable instanceof AbstractTable) ? langTable : new RawTable(langTable);
+      const incomingLanguage = (langTable instanceof AbstractTable)
+        ? langTable
+        : new RawTable(langTable);
 
       return incomingLanguage.get()
         .then((languageTable) => {
@@ -52,7 +54,9 @@ export default class Roller {
             throw new Error(valRes);
           }
           this.languages[languageTable.name] = languageTable;
-          this.currentLanguage = this.currentLanguage === null ? languageTable.name : this.currentLanguage;
+          this.currentLanguage = this.currentLanguage === null
+            ? languageTable.name
+            : this.currentLanguage;
           resolve();
         })
         .catch(reject);
@@ -110,7 +114,8 @@ export default class Roller {
   }
 
   rollAll(rolls) {
-    if (this.status.errors.length !== 0 || Object.keys(this.status.missingReferences).length !== 0) {
+    if (this.status.errors.length !== 0
+      || Object.keys(this.status.missingReferences).length !== 0) {
       return Promise.reject(new Error('Impossible to roll tables with error or missing dependencies.'));
     }
     // 1. Roll all rules.

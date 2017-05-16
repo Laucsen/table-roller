@@ -29,7 +29,7 @@ describe('default table rolls', () => {
       gem10,
     ])
       .then(ads => {
-        console.log(ads);
+        // console.log(ads);
         return ads;
       })
       .then(() => done());

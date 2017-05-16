@@ -5,6 +5,7 @@ import Treasures from '../src/index';
 import { FireBaseOnDemandLanguage, FireBaseOnDemandTable } from './firebase/tables';
 
 // describe_not
+// eslint-disable-next-line no-undef
 describe_not('firebase table rolls', () => {
   let db;
   let treasures;
@@ -19,7 +20,9 @@ describe_not('firebase table rolls', () => {
   });
 
   // Create a new Treasures
-  before(() => treasures = new Treasures());
+  before(() => {
+    treasures = new Treasures();
+  });
 
   // Add a language.
   before((done) => {
@@ -46,7 +49,7 @@ describe_not('firebase table rolls', () => {
   before((done) => {
     treasures.registerAll(availableTables.map(t => new FireBaseOnDemandTable(db, t)))
       .then(analysis => {
-        console.log(analysis);
+        // console.log(analysis);
         return analysis;
       })
       .then(() => done())
@@ -96,7 +99,7 @@ describe_not('firebase table rolls', () => {
       })
       .then(res => {
         // console.log(res.toJSON());
-        console.log(res.listNames());
+        // console.log(res.listNames());
         // console.log(res.listDeslcriptions());
         // console.log(res.listFull());
         return res;

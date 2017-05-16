@@ -1,6 +1,9 @@
 const $ = require('gulp-load-plugins')();
 const gulp = require('gulp');
 const isparta = require('isparta');
+const path = require('path');
+const sequence = require('run-sequence');
+const del = require('del');
 
 const config = {
   paths: {
@@ -92,6 +95,26 @@ gulp.task('validate', [
   'eslint',
   'test:unit'
 ]);
+
+gulp.task('clean', function () {
+  return del('dist');
+});
+
+gulp.task('babel-files', function () {
+  return gulp.src(config.paths.src)
+    .pipe($.babel())
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('babel', function (cb) {
+  sequence('clean', 'babel-files', cb);
+});
+
+/**
+ *
+ * Executed in install
+ */
+gulp.task('prepublish', ['nsp', 'babel']);
 
 /**
  * Alias for 'validate'.

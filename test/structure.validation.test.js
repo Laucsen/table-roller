@@ -11,10 +11,10 @@ describe('table structure analyser', () => {
 
   it('should get a table argument', () => {
     return treasures.registerAll([{
-        name: 'somename',
-        roll: '$level',
-        rows: [{ roll: 1, result: [] }]
-      },])
+      name: 'somename',
+      roll: '$level',
+      rows: [{ roll: 1, result: [] }]
+    },])
       .then(response => {
         expect(response.arguments).to.deep.equal(['level']);
       })

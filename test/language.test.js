@@ -6,7 +6,9 @@ describe('language table validation', () => {
   let treasures;
 
   // Create a new Treasures
-  before(() => treasures = new Treasures());
+  before(() => {
+    treasures = new Treasures();
+  });
 
   // Add a language.
   it('should validate language structure', (done) => {
@@ -44,5 +46,4 @@ describe('language table validation', () => {
       }),
     ]).should.be.rejectedWith('Item has not a description: Azurita');
   });
-
 });

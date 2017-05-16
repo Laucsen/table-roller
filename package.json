@@ -1,6 +1,20 @@
 {
   "name": "table-roller",
   "version": "0.1.0",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "keywords": [
+    "rpg",
+    "table",
+    "roll"
+  ],
+  "author": "Diego Laucsen da Rosa <diego.laucsen@gmail.com> (https://github.com/laucsen)",
+  "license": "MIT",
+  "pre-commit": [
+    "validate"
+  ],
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -12,6 +26,7 @@
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
     "chai-things": "^0.2.0",
+    "del": "^2.2.2",
     "dirty-chai": "^1.2.2",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
@@ -27,12 +42,16 @@
     "gulp-istanbul": "^1.1.1",
     "gulp-load-plugins": "^1.5.0",
     "gulp-mocha": "^3.0.1",
+    "gulp-nsp": "^2.4.2",
     "gulp-plumber": "^1.1.0",
     "isparta": "^4.0.0",
+    "pre-commit": "^1.2.2",
+    "run-sequence": "^1.2.2",
     "sinon": "^2.2.0",
     "sinon-chai": "^2.10.0"
   },
   "scripts": {
+    "prepublish": "gulp prepublish",
     "integrate": "gulp integrate",
     "test": "gulp test",
     "validate": "gulp validate"
