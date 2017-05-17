@@ -1,5 +1,8 @@
 # Table Roller
 
+[![Build Status](https://travis-ci.org/Laucsen/table-roller.svg?branch=master)](https://travis-ci.org/Laucsen/table-roller)
+
+
 A framework to create RPG like tables, where each row has a random probability to be selected in a pré-configured range.
 
 ## Installation
