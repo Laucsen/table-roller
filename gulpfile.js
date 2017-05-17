@@ -86,6 +86,15 @@ gulp.task('test:unit', ['coverage'], (cb) => {
 });
 
 /**
+ * Runs both unit and end to end tests, sequentially.
+ *
+ * `gulp test`
+ */
+gulp.task('test', function(cb) {
+  sequence('test:unit', cb);
+});
+
+/**
  * Lints source code and runs test suite.
  * Used as a pre-commit hook.
  *
